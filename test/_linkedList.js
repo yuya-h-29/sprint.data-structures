@@ -112,11 +112,9 @@ describe("Linked Lists", () => {
 +-------------------------+
 | Advanced Requirements!! |
 +-------------------------+
-
 The following are part of the advanced requirements.
 Do not proceed until you are done with the basic
 requirements for ALL data structures in this exercise.
-
 Uncomment by removing the 'x'.
 */
 

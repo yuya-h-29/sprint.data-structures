@@ -5,7 +5,7 @@ const { isClass } = require("./utilities");
 const LinkedList = require("../src/LinkedList");
 
 let linkedList;
-describe("Linked Lists", () => {
+describe.only("Linked Lists", () => {
   beforeEach(() => {
     linkedList = new LinkedList(5);
   });
@@ -78,9 +78,7 @@ describe("Linked Lists", () => {
 
       const headBeforeRemoval = linkedList.head;
       const headAfterRemoval = headBeforeRemoval.next;
-
       const headRemoved = linkedList.removeHead();
-
       expect(headRemoved).to.deep.equal(headBeforeRemoval);
       expect(linkedList.head).to.deep.equal(headAfterRemoval);
     });
@@ -96,7 +94,6 @@ describe("Linked Lists", () => {
       linkedList.appendToTail(3);
       const nodeValue6 = linkedList.appendToTail(6);
       linkedList.appendToTail(2);
-
       expect(linkedList.findNode(6)).to.deep.equal(nodeValue6);
       expect(linkedList.findNode(6).value).to.equal(6);
     });

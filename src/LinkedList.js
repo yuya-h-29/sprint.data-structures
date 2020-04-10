@@ -25,17 +25,29 @@ class LinkedList {
       this.tail = this.head;
       return node;
     } else {
-      this.head = node;
-      this.tail = this.head;
-      return this.head;
+      this.tail.next = node;
+      this.tail = node;
+      return node;
     }
-
-    // console.log("current tail?", this.tail, "next node??", node);
   }
 
-  removeHead() {}
+  removeHead() {
+    let removedHead = this.head;
+    this.head = this.head.next;
+    return removedHead;
+  }
 
-  findNode(value) {}
+  findNode(value) {
+    let currentNode = this.head;
+    while (currentNode.value !== value) {
+      currentNode = currentNode.next;
+      if (currentNode.value === value) {
+        return currentNode;
+      } else if (currentNode.next === null) {
+        return null;
+      }
+    }
+  }
 
   /*
 +-------------------------+
@@ -57,48 +69,6 @@ requirements for ALL data structures in this exercise.
 
   removeAfter(refNode) {}
 }
-
-let testNode = new LinkedList(5);
-
-testNode.appendToTail(3);
-
-console.log(testNode);
-
-// console.log(testNode);
-
-// linkedList = new LinkedList();
-
-// const newNode = linkedList.appendToTail(5);
-
-// console.log(deepEqual(linkedList.head, newNode));
-// console.log(deepEqual(linkedList.tail, newNode));
-
-// function deepEqual(object1, object2) {
-//   if (object1 === object2) return true;
-
-//   if (
-//     object1 == null ||
-//     typeof object1 != "object" ||
-//     object2 == null ||
-//     typeof object2 != "object"
-//   )
-//     return false;
-
-//   var propertiesInA = 0;
-//   var propertiesInB = 0;
-
-//   for (var prop in object1) {
-//     propertiesInA += 1;
-//   }
-
-//   for (var prop in object2) {
-//     propertiesInB += 1;
-//     if (!(prop in object1) || !deepEqual(object1[prop], object2[prop]))
-//       return false;
-//   }
-
-//   return propertiesInA == propertiesInB;
-// }
 
 module.exports = LinkedList;
 

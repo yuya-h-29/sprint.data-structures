@@ -25,9 +25,44 @@ class Tree {
     return result;
   }
 
-  remove() {
-    // .remove(value) removes the value from tree and returns the removed value. You may need to write tests for this.
+  remove(value) {
+    // .remove(value) removes the value from tree and returns the removed value.
+    let result;
+
+    const removeRecursive = (data) => {
+      for (let i = 0; i < data.length; i++) {
+        if (data[i].value === value) {
+          result = data[i].value;
+          data.splice(i, 1);
+
+          return result;
+        }
+        removeRecursive(data[i].children);
+      }
+    };
+    removeRecursive(this.children);
+
+    return result;
   }
+
+  // if this something contains the value
+  // then equal that value and remove the value;
+
+  // look through the tree
+  // -> use filter to remove
+  //   -> return the removedResult;
+
+  // remove from the array
+
+  // var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+  // var removed = arr.splice(2,2);
+
+  /*
+    removed === [3, 4]
+    arr === [1, 2, 5, 6, 7, 8, 9, 0]
+    */
+
+  // this.children.contains(value).filter()
 
   /*
 

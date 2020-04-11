@@ -57,10 +57,33 @@ describe.only("Trees", () => {
       tree.addChild(3);
       tree.children[0].addChild(4);
       tree.children[1].addChild(5);
+
       expect(tree.contains(4)).to.equal(true);
       expect(tree.contains(5)).to.equal(true);
     });
   });
+
+  describe("the remove method", () => {
+    // remove to return a value from children
+    it("should return a value", () => {
+      tree.addChild(2);
+      tree.addChild(3);
+
+      let testNumber = tree.remove(3);
+
+      expect(testNumber).to.equal(3);
+    });
+
+    it("should remove value from tree", () => {
+      tree.addChild(2);
+      tree.addChild(3);
+
+      tree.remove(3);
+
+      expect(tree.contains(3)).to.equal(false);
+    });
+  });
+  // it("should return false if value is not in tree")  });
 
   /*
 +-------------------------+

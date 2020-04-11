@@ -39,7 +39,7 @@ describe("The Binary Search Tree", () => {
     });
   });
 
-  describe.only("The insert method", () => {
+  describe("The insert method", () => {
     it("should exist on the Tree prototype", () => {
       expect(BinarySearchTree.prototype.insert).to.exist;
       expect(typeof BinarySearchTree.prototype.insert).to.equal("function");
@@ -103,7 +103,7 @@ describe("The Binary Search Tree", () => {
     });
   });
 
-  describe("The traverseDepthFirstInOrder method", () => {
+  describe.only("The traverseDepthFirstInOrder method", () => {
     it("should exist on the Tree prototype", () => {
       expect(BinarySearchTree.prototype.traverseDepthFirstInOrder).to.exist;
     });

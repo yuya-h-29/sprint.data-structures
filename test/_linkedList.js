@@ -115,7 +115,7 @@ requirements for ALL data structures in this exercise.
 Uncomment by removing the 'x'.
 */
 
-  describe("The forEach method", () => {
+  xdescribe("The forEach method", () => {
     it("should exist on the LinkedList prototype", () => {
       expect(LinkedList.prototype.forEach).to.exist;
       expect(typeof LinkedList.prototype.forEach).to.equal("function");
@@ -149,7 +149,7 @@ Uncomment by removing the 'x'.
     });
   });
 
-  describe("The print method", () => {
+  xdescribe("The print method", () => {
     it("should exist on the LinkedList prototype", () => {
       expect(LinkedList.prototype.print).to.exist;
       expect(typeof LinkedList.prototype.print).to.equal("function");
@@ -163,7 +163,7 @@ Uncomment by removing the 'x'.
     });
   });
 
-  describe("The insertHead method", () => {
+  xdescribe("The insertHead method", () => {
     it("should exist on the LinkedList prototype", () => {
       expect(LinkedList.prototype.insertHead).to.exist;
       expect(typeof LinkedList.prototype.insertHead).to.equal("function");
@@ -178,7 +178,7 @@ Uncomment by removing the 'x'.
     });
   });
 
-  describe("The insertAfter method", () => {
+  xdescribe("The insertAfter method", () => {
     it("should exist on the LinkedList prototype", () => {
       expect(LinkedList.prototype.insertAfter).to.exist;
       expect(typeof LinkedList.prototype.insertAfter).to.equal("function");
@@ -214,7 +214,7 @@ Uncomment by removing the 'x'.
     });
   });
 
-  describe("The removeAfter method", () => {
+  xdescribe("The removeAfter method", () => {
     it("should exist on the LinkedList prototype", () => {
       expect(LinkedList.prototype.removeAfter).to.exist;
       expect(typeof LinkedList.prototype.removeAfter).to.equal("function");

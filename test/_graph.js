@@ -125,7 +125,7 @@ describe("Graphs", () => {
     });
   });
 
-  describe("The removeEdge method", () => {
+  describe.only("The removeEdge method", () => {
     it("should exist on the Graph prototype", () => {
       expect(Graph.prototype.removeEdge).to.exist;
     });

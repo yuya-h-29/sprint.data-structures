@@ -5,11 +5,10 @@ const { isClass } = require("./utilities");
 const Tree = require("../src/Tree");
 
 let tree;
-describe("Trees", () => {
+describe.only("Trees", () => {
   beforeEach(() => {
     tree = new Tree(1);
   });
-
   describe("The Tree class", () => {
     it("should be a class", () => {
       expect(isClass(Tree)).to.be.true;

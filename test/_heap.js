@@ -3,13 +3,13 @@
 const { expect } = require("chai");
 const Heap = require("../src/Heap");
 
-describe("Heaps", () => {
+xdescribe("Heaps", () => {
   let heap;
   beforeEach(() => {
     heap = new Heap();
   });
 
-  describe("The Heap constructor", () => {
+  xdescribe("The Heap constructor", () => {
     it("should be a function", () => {
       expect(Heap).to.be.a("function");
     });
@@ -18,7 +18,7 @@ describe("Heaps", () => {
     });
   });
 
-  describe("The insert method", () => {
+  xdescribe("The insert method", () => {
     it("should have a insert method that exists on the Heap prototype", () => {
       expect(Heap.prototype.insert).to.exist;
     });
@@ -36,7 +36,7 @@ describe("Heaps", () => {
     });
   });
 
-  describe("The removeMax method", () => {
+  xdescribe("The removeMax method", () => {
     it("should have a removeMax method that exists on the Heap prototype", () => {
       expect(Heap.prototype.removeMax).to.exist;
     });

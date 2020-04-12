@@ -46,6 +46,12 @@ function ControlledArray(limit) {
     storage[index] = value;
   };
 
+  controlledArray.remove = (index) => {
+    checkLimit(index);
+    delete storage[index];
+    storage[index] = null;
+  };
+
   controlledArray.each = (callback) => {
     for (let i = 0; i < storage.length; i += 1) {
       callback(storage[i], i, storage);
